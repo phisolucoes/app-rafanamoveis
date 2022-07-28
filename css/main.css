@@ -1,0 +1,42 @@
+/* Fontes do google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+/* --------------------------------------------------------------------------------------------- */
+/* Declaração de variaveis */
+:root{
+    --main-bg-color: #eee;
+    --primary-color: #0f610f;
+    --text-primary-color: #333;
+}
+
+/* Exemplo de uso da variavel */
+/* p{color: var(--primary-color)} */
+/* --------------------------------------------------------------------------------------------- */
+/* Resete do html */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-primary-color);
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* Estilos globais para fontes */
+
+body{background-color: var(--main-bg-color);}
+h1{font-size: 3.5rem;}
+h2{font-size: 2.3rem;}
+h3{font-size: 1.8rem;}
+p{font-size: 1.2rem; text-align: justify;}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Estilos globais para containeres */
+
+.container{max-width: 90%; margin:auto; padding: 10px;}
+.row{display:flex; flex-direction: row;}
+.col{flex: 1; padding: 10px;}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Configurações gerais */
+
+.right{max-width: 200px; background-color: aqua;}
