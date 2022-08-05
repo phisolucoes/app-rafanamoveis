@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafana Móveis</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.9.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.9.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.9.1/firebase-performance-compat.js"></script>
+    <!-- 
+          initialize the SDK after all desired features are loaded, set useEmulator to false
+          to avoid connecting the SDK to running emulators.
+        -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css do projeto -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Link do bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container-principal">
+            <div class="row m-0">
+                <div class="col-md-8">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-4">Nome do Móvel</h1>
+                                <p>Com uma pequena descrição.</p>
+                                <img src="./images/mesa-exempl.jpeg" alt="mesa de exemplo" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container">
+                        <div class="row ">
+                            <h2>Informações do Produto</h2>
+                            <div class="col-sm-6">
+                                <ul>
+                                    <li>Tópico um</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe fuga quis ducimus
+                                    nam modi, obcaecati recusandae odit ab repellat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-2 col-sm-12 miniaturas-area">...</div>
+                <div class="col-lg-1 col-sm-12 icones-area">...</div> -->
+            </div>
+        </section>
+        <!-- parte de baixo do site -->
+        <div class="tabHeaders">
+            <div id="London" class="tabcontent">
+                <h1>Bases</h1>
+                <p>Elegancia e sofisticação</p>
+            </div>
+
+            <div id="Paris" class="tabcontent">
+                <h1>Tampos</h1>
+                <p>Elegancia e sofisticação</p>
+            </div>
+
+            <div id="Tokyo" class="tabcontent">
+                <h1>Quadrado</h1>
+                <p>Elegancia e sofisticação</p>
+            </div>
+
+            <div id="Oslo" class="tabcontent">
+                <h1>Tampo Oval</h1>
+                <p>Elegancia e sofisticação</p>
+            </div>
+
+            <button class="tablink" onclick="openCity('London', this, '#198754')" id="defaultOpen">BASES</button>
+            <button class="tablink" onclick="openCity('Paris', this, '#0D6EFD')">TAMPOS</button>
+            <button class="tablink" onclick="openCity('Tokyo', this, '#DC3545')">QUADRADO</button>
+            <button class="tablink" onclick="openCity('Oslo', this, '#FD7E14')">TAMPO OVAL</button>
+        </div>
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDUJfxUln0O8OP2Uu-GpduhRr5x27XyRAo",
+            authDomain: "app-rafanamoveis.firebaseapp.com",
+            projectId: "app-rafanamoveis",
+            storageBucket: "app-rafanamoveis.appspot.com",
+            messagingSenderId: "939608856264",
+            appId: "1:939608856264:web:52c257ee04c65fc887f7fd"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadEl = document.querySelector('#load');
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            // firebase.firestore().doc('/foo/bar').get().then(() => { });
+            // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            // firebase.analytics(); // call to activate
+            // firebase.analytics().logEvent('tutorial_completed');
+            // firebase.performance(); // call to activate
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+            try {
+                let app = firebase.app();
+                let features = [
+                    'auth',
+                    'database',
+                    'firestore',
+                    'functions',
+                    'messaging',
+                    'storage',
+                    'analytics',
+                    'remoteConfig',
+                    'performance',
+                ].filter(feature => typeof app[feature] === 'function');
+                loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+            } catch (e) {
+                console.error(e);
+                loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+            }
+        });
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="./js/tabHeaders.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    margin: 0;
+}
+header {
+    margin-bottom: 55px;
+}
+.container-principal {
+    width: 100%;
+    min-height: calc(100vh + 170px);
+}
+.titulo-principal {
+    line-height: 50px;
+}
+.info-produto ul li {
+    list-style: circle;
+}
+.info-produto p {
+    text-align: justify;
+}
+
+/* tab headers */
+/* Style the tab buttons */
+.tabHeaders{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 16px;
+    font-size: 12px;
+    width: 25%;
+    height: 70px;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    height: 100px;
+}
+
+/* Style each tab content individually */
+#London {
+    background-color: #198754;
+
+}
+
+#Paris {
+    background-color: #0D6EFD;
+
+}
+
+#Tokyo {
+    background-color: #DC3545;
+}
+
+#Oslo {
+    background-color: #FD7E14;
+}
